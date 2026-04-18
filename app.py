@@ -25,7 +25,7 @@ def user_input_features():
             'Glucose': glucose,
             'BloodPressure': blood_pressure,
             'FamilyHistory': family_history}
-    features = pd.DataFrame(data, index=)
+    features = pd.DataFrame(data, index='')
     return features
 
 input_df = user_input_features()
