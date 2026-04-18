@@ -25,7 +25,8 @@ def user_input_features():
             'Glucose': glucose,
             'BloodPressure': blood_pressure,
             'FamilyHistory': family_history}
-    # FIX: Using to define the first row of data
+    
+    # Correctly defining the first row of data for Pandas
     features = pd.DataFrame(data, index=)
     return features
 
@@ -64,7 +65,7 @@ with col1:
     prediction = model.predict(input_df)
     prediction_proba = model.predict_proba(input_df)
 
-    # FIX: Added and / to properly extract the values from the array
+    # Correctly extracting the specific values from the prediction array
     if prediction == 1:
         st.error(f"**High Risk** detected. (Probability: {prediction_proba:.2f})")
     else:
